@@ -27,5 +27,10 @@ if(@$_SESSION['log_type'] == 1){
 	include 'func_eliminar_categoria.php';
 	include 'func_drop_down_categorias.php';
 	include 'func_drop_down_promocoes.php';
+	include 'func_lista_vouchers.php';
+	include 'func_atualizar_voucher.php';
+	include 'func_eliminar_voucher.php';
+	include 'func_lista_promocoes.php';
+	include 'func_atualizar_promocao.php';
 }
 ?>
