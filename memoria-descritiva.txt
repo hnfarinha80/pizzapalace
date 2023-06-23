@@ -1,0 +1,53 @@
+PizzaPalace
+
+- Exercicio Coletivo - 
+- Construção de interface gráfica full responsive
+
+- Conceito - 
+	- Website de pizzaria, com forte foco na imagem, cor e comportamento userfriendly.
+	- Apresentação do negócio, contactos, mapa de localização e ementa
+
+- Funcionalidade Base - 
+	- Website publico, aceitando encomendas de qualquer visitante
+	- Acesso por registo, com historial de encomendas e "slicecoin" para pagamentos internos no sistema.
+	- Admins com acesso por credenciais a painel de gestão de ementas, visualização de top seller product, volume de vendas (total global, total por mes), top buyer, "slicecoin" payments, saldos "slicecoin" por utilizador, lista de utilizadores, buy rate por utilizador. 
+	- Promoções - O admin pode criar promoções, ao criar uma promoção fazer o envio de mail para os users que tenham comprado essa pizza com oferta de x coins na compra pelo link
+	- Vouchers/tokens - Gerados pelo admin em BO cria um token id para envio por mail e pode ser usado no checkout descontando ao carrinho o valor de voucher
+	- Afiliados - Cada user registado pode convidar a registo outros users. Uma compra/registo por link de afiliado revert X coins para o sponsor
+	- --- ?? --- - 
+	Permitir envio gratuito para compras de valor => a X com base na localização por API ou por escolha de morada de entrega. 
+
+	- Cross selling - 
+		- Em checkout sugerir artigos frequentemente comprados com o tipo de artigo no carrinho
+
+- Registered Vs Unregistered - 
+
+	- Registados têm acumular "slicecoins" nas compras efetuadas e podem comprar pizzas com essas "slicecoin" (rácio a definir)
+	- "minigame" - Os registados podem "ganhar slicecoins" (
+		A cada compra >= a X€, pode fazer um jogo e ganhar mais slicecoins, numero de rodadas por degraus de compras).
+	- Permitir a criação de pizza a medida (escolha de ingredientes)
+	- Não registados fazem processo de compra "normal" até ao checkout
+
+
+- Tecnologias - 
+Html, css, jquery, php, mysql (json - comunicação FE / BE sem recarregarmento)
+
+- Rules - 
+	- Construção nativa de todos os elementos.
+	- Recursos externos limitados a googlefonts, googlemaps e jquery
+
+
+- Recursos Necessários - (hugo)
+ 
+	- Imagens para pizzas
+	- Imagens para slider
+	- icons/imagens
+
+
+
+
+
+
+
+
+
