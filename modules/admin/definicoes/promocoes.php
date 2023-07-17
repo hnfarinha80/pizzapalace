@@ -55,31 +55,14 @@ if(isset($_POST['nova_promocao'])){
 
 <!-- Lista de categorias existentes -->
 <h3>Promoções Existentes</h3>
-<form method="post">
-<div class="row">
-	<div class="col col-3 text_center vtext_middle">
-		<label>Nome Promoção</label>
-		<input type="text" name="prom_nome" value="">
-		<input type="hidden" name="prom_id" value="">
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<label>Data Inicio</label>
-		<input type="date" name="prom_data_ini" placeholder="Data Inicio" value=""><br>
-		<label>Data Fim</label>
-		<input type="date" name="prom_data_fim" placeholder="Data Fim" value="">
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<label>Valor %: </label>
-		<input type="number" min="0" max="10" step="1" name="prom_per_val"><br>
-		<label>Valor Inteiro:</label>
-		<input type="text" name="prom_int_val" placeholder="Valor Inteiro">
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<button type="submit" class="bt bt_action" name="atualizar_promocao">
-			<i class="fas fa-info"></i> Atualizar Promoção</button>
-		<button type="submit" class="bt bt_cancel" name="eliminar_promocao">
-			<i class="fas fa-trash"></i> Apagar Promoção</button>
-	</div>
-</div>
-</form>
+<?php
+lista_promocoes();
+if(isset($_POST["atualizar_promocao"])){
+	atualizar_promocao($_POST["prom_nome"], $_POST["prom_id"],$_POST["prom_data_ini"],$_POST["prom_data_fim"],$_POST["prom_per_val"],$_POST["prom_int_val"]);
+}
+if(isset($_POST["eliminar_promocao"])){
+	eliminar_promocao($_POST["prom_id"]);
+}
+?>
+
 <!-- Fim Lista de categorias existentes -->

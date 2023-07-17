@@ -6,13 +6,14 @@ function validar_login($log_email, $log_senha){
 	//Comparar os dados inseridos no form com a bd
 	//mysqli_fetch_array - Retornar sob a form de array os valores obtidos na bd
 	//mysqli_query - executar determinado comando sql (identificar a ligacao a usar para executar o comando)
-	$validar = mysqli_fetch_array(mysqli_query($conn, "SELECT log_email, log_senha, log_type FROM logins WHERE log_email = '$log_email' AND log_senha = '$log_senha'"));
+	$validar = mysqli_fetch_array(mysqli_query($conn, "SELECT log_id, log_email, log_senha, log_type FROM logins WHERE log_email = '$log_email' AND log_senha = '$log_senha'"));
 	//Nao existem as credenciais inseridas na BD
 	if(!$validar){
 		echo '<h4>Os dados inseridos não são válidos</h4>';
 	}else{
 		$_SESSION["log_type"] = $validar["log_type"];
 		$_SESSION["log_email"] = $log_email;
+		$_SESSION["log_id"] = $validar["log_id"];
 		echo '<meta http-equiv="refresh" content="0;url=?">';
 	}
 	/* validacao "manual" de credenciais 

@@ -17,7 +17,19 @@
 	</div>
 	<div class="col col-3 text_center vtext_middle"></div>
 	<div class="col col-3 text_center vtext_middle">
-		<button type="submit" class="bt bt_primary" name="nova_categoria">Criar Categoria</button>
+		<?php
+		include 'connections/conn.php';
+		$q = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM categorias"));
+		include 'connections/deconn.php';
+		if($q < 4){
+			//permitir inserir mais
+			echo '<button type="submit" class="bt bt_primary" name="nova_categoria">Criar Categoria</button>';
+		}else{
+			//nao permitir
+			echo '<button type="submit" class="bt bt_error" name="nova_categoria" disabled>Criar Categoria</button>';
+		}
+		?>
+		
 	</div>
 </div>
 </form>

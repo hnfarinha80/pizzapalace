@@ -1,3 +1,4 @@
+<?php alocar_carrinho(); ?>
 <header class="mb1">
 	<div class="row">
 		<div class="col col-6">
@@ -18,7 +19,8 @@
 				</li>
 				<li>
 					<a href="?p=carrinho">
-						<i class="fas fa-shopping-cart"></i><sup>2</sup>
+						<i class="fas fa-shopping-cart"></i>
+						<?php contar_itens_carrinho();?>
 					</a>
 				</li>
 				<li class="mobile">

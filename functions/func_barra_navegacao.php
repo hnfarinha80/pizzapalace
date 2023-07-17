@@ -13,13 +13,14 @@ function barra_navegacao(){
 		//Cria a navegação destes 4 menus de administração, em cada entrada vamos mostrar o nome da opção. Estes ficheiros ficam em modules/admin
 	}else{
 		//User Menu
-		for ($i=1; $i < 6; $i++) { 
+		menu_categorias();
+		/*for ($i=1; $i < 6; $i++) { 
 			if($i == 5){
 				echo '<li><a href="?p='.$i.'"> Contactos </a></li>';
 			}else{
 				echo '<li><a href="?p='.$i.'"> Menu '.$i.'</a></li>';
 			}
-		}
+		}*/
 	}
 	//Opção de logout da conta autenticada
 	if(@$_SESSION["log_type"] != ''){

@@ -9,6 +9,13 @@
 	</div>
 	<?php 
 	func_lista_artigos();
+	
+	if(isset($_POST["editar_artigo"])){
+		editar_artigo($_POST["art_id"]);
+	}
+	if(isset($_POST["delete_artigo"])){
+		delete_artigo($_POST["art_id"]);
+	}
 	?>
 
 </section>

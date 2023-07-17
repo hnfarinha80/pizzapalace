@@ -49,28 +49,10 @@ if(isset($_POST['nova_voucher'])){
 
 <!-- Lista de categorias existentes -->
 <h3>Vouchers Existentes</h3>
-<form method="post">
-<div class="row">
-	<div class="col col-3 text_center vtext_middle">
-		<input type="text" name="vou_code" placeholder="Codigo" value="">
-		<input type="hidden" name="vou_id" value="">
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<label>Data Inicio</label>
-		<input type="date" name="vou_data_ini" placeholder="Data Inicio" value=""><br>
-		<label>Data Fim</label>
-		<input type="date" name="vou_data_fim" placeholder="Data Fim" value="">
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<input type="text" name="vou_valor" placeholder="Valor">
-		
-	</div>
-	<div class="col col-3 text_center vtext_middle">
-		<button type="submit" class="bt bt_action" name="atualizar_voucher">
-			<i class="fas fa-info"></i> Atualizar Voucher</button>
-		<button type="submit" class="bt bt_cancel" name="eliminar_voucher">
-			<i class="fas fa-trash"></i> Apagar Voucher</button>
-	</div>
-</div>
-</form>
+<?php
+ lista_vouchers();
+ if(isset($_POST["atualizar_voucher"])){ atualizar_voucher($_POST["vou_code"],$_POST["vou_id"],$_POST["vou_data_ini"],$_POST["vou_data_fim"],$_POST["vou_valor"]); }
+ if(isset($_POST["eliminar_voucher"])){ eliminar_voucher($_POST['vou_id']); }
+?>
+
 <!-- Fim Lista de categorias existentes -->

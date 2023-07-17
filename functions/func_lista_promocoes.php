@@ -1,7 +1,7 @@
 <?php
 function lista_promocoes(){
 	include 'connections/conn.php';
-	$q = mysqli_query($conn,"SELECT * FROM promocoes");
+	$q = mysqli_query($conn,"SELECT * FROM promocoes WHERE prom_id != 1");
 	while($a = mysqli_fetch_array($q)){
 		echo '
 		<form method="post">
